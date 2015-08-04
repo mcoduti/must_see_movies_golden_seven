@@ -6,8 +6,31 @@ class MoviesController < ApplicationController
 
   end
 
-  def add_movie
+  def actors_delete
+    @actor_id = params["id"]
+    @list_of_actors = Actor.all
+    @list_of_actors.find(@actor_id).destroy
+    redirect_to("/actors")
 
+  end
+
+    def movies_delete
+    @movie_id = params["id"]
+    @list_of_movies = Movie.all
+    @list_of_movies.find(@movie_id).destroy
+    redirect_to("/movies")
+
+    end
+
+    def directors_delete
+    @director_id = params["id"]
+    @list_of_directors = Director.all
+    @list_of_directors.find(@director_id).destroy
+    redirect_to("/directors")
+
+   end
+
+  def add_movie
 
   end
 
