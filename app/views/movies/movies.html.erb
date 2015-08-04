@@ -1,0 +1,44 @@
+<div>
+<a href="/">back to index</a>
+</div>
+
+<div>
+<a href="/movies/add">add movie</a>
+</div>
+
+<table>
+  <tr>
+    <th>Picture</th>
+    <th>Title</th>
+    <th>Year</th>
+    <th>Duration</th>
+    <th>Description</th>
+    <th>Action</th>
+    <th></th>
+  </tr>
+  <% @list_of_movies.each do |movie| %>
+  <tr>
+    <td>
+      <img src="<%= movie.image_url %>" width="80">
+    </td>
+    <td>
+      <%= movie.title %>
+    </td>
+    <td>
+      <%= movie.year %>
+    </td>
+    <td>
+      <%= movie.duration %>
+    </td>
+    <td>
+      <%= movie.description %>
+    </td>
+    <td>
+      <a href="http://localhost:3000/movies/<%= movie.id %>/edit">Edit</a>
+    </td>
+  </tr>
+  <tr>
+    <td><br> </td>
+  </tr>
+  <% end %>
+</table>

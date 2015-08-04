@@ -1,0 +1,40 @@
+<div>
+<a href="/">back to index</a>
+</div>
+
+<div>
+<a href="/directors/add">add directors</a>
+</div>
+
+<table>
+  <tr>
+    <th>Picture</th>
+    <th>Name</th>
+    <th>Bio</th>
+    <th>DOB</th>
+    <th>Actions</th>
+    <th></th>
+  </tr>
+  <% @list_of_directors.each do |director| %>
+  <tr>
+    <td>
+      <img src="<%= director.image_url %>" width="80">
+    </td>
+    <td>
+      <%= director.name %>
+    </td>
+    <td>
+      <%= director.bio %>
+    </td>
+    <td>
+      <%= director.dob %>
+    </td>
+    <td>
+      <a href="http://localhost:3000/directors/<%= director.id %>/edit">Edit</a>
+    </td>
+  </tr>
+  <tr>
+    <td><br> </td>
+  </tr>
+  <% end %>
+</table>

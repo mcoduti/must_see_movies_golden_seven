@@ -1,0 +1,23 @@
+<div>
+  <img src="<%= @actor_image_url %>" width="100">
+</div>
+
+<h1>Edit actor #<%= @actor_id %></h1>
+
+<form action="http://localhost:3000/update_actor/<%= @actor_id %>">
+  Name:
+  <input name="the_name" type="text" value="<%= @actor_name %>">
+
+  Bio:
+  <input name="the_bio" type="text" value="<%#= @actor_bio %>">
+
+  Dob:
+  <input name="the_dob" type="text" value="<%= @actor_dob %>">
+
+  Image_url:
+  <input name="the_source" type="text" value="<%= @actor_image_url %>">
+
+  <button>Update actor</button>
+</form>
+
+<a href="/actors">Cancel and go back</a>

@@ -1,0 +1,24 @@
+
+
+<h1>Add new movie</h1>
+
+<form action="http://localhost:3000/create_new_movie">
+  Title:
+  <input name="the_title" type="text" value="<%= @movie_title %>">
+
+  Description:
+  <input name="the_description" type="text" value="<%= @movie_description %>">
+
+  Year:
+  <input name="the_year" type="text" value="<%= @movie_year %>">
+
+  Duration:
+  <input name="the_duration" type="text" value="<%= @movie_duration %>">
+
+  Image_url:
+  <input name="the_source" type="text" value="<%= @movie_image_url %>">
+
+  <button>Add movie</button>
+</form>
+
+<a href="/movies">Cancel and go back</a>
